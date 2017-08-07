@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/08/2017 12:24:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="shop.entities.Consumer" table="consumer" catalog="tiendalaboratorio2" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="account" class="shop.entities.Account" fetch="select">
+            <column name="accountid" length="100" />
+        </many-to-one>
+        <property name="firstname" type="string">
+            <column name="firstname" length="50" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="50" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="250" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="25" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="25" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="100" />
+        </property>
+        <set name="orders" table="order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="consumerid" />
+            </key>
+            <one-to-many class="shop.entities.Order" />
+        </set>
+    </class>
+</hibernate-mapping>

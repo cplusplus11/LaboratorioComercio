@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/08/2017 12:24:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="shop.entities.Account" table="account" catalog="tiendalaboratorio2" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="30" />
+        </property>
+        <property name="fullname" type="string">
+            <column name="fullname" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <set name="consumers" table="consumer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountid" length="100" />
+            </key>
+            <one-to-many class="shop.entities.Consumer" />
+        </set>
+    </class>
+</hibernate-mapping>

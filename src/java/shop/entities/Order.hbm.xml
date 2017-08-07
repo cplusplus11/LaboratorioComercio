@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/08/2017 12:24:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="shop.entities.Order" table="order" catalog="tiendalaboratorio2" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="consumer" class="shop.entities.Consumer" fetch="select">
+            <column name="consumerid" />
+        </many-to-one>
+        <many-to-one name="pay" class="shop.entities.Pay" fetch="select">
+            <column name="payid" />
+        </many-to-one>
+        <many-to-one name="shipping" class="shop.entities.Shipping" fetch="select">
+            <column name="shippingid" />
+        </many-to-one>
+        <property name="number" type="string">
+            <column name="number" length="25" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+        <set name="orderdetails" table="orderdetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="orderid" />
+            </key>
+            <one-to-many class="shop.entities.Orderdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

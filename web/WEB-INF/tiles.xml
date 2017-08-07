@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+ 
+<tiles-definitions>     
+    <definition name="home.index" template="/WEB-INF/jsp/templates/templateUser.jsp">      
+        <put-attribute name="content" value="/WEB-INF/jsp/home/index.jsp"></put-attribute>     
+    </definition>
+    <definition name="misionyvision.index" template="/WEB-INF/jsp/templates/templateUser.jsp">      
+        <put-attribute name="content" value="/WEB-INF/jsp/misionyvision/index.jsp"></put-attribute>     
+    </definition>
+    <definition name="presentacion.index" template="/WEB-INF/jsp/templates/templateUser.jsp">      
+        <put-attribute name="content" value="/WEB-INF/jsp/presentacion/index.jsp"></put-attribute>     
+    </definition>
+    <definition name="product.category" template="/WEB-INF/jsp/templates/templateUser.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/product/category.jsp"></put-attribute>
+    </definition>
+    <definition name="product.detail" template="/WEB-INF/jsp/templates/templateUser.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/product/detail.jsp"></put-attribute>
+    </definition>
+    <definition name="account.registrar" template="/WEB-INF/jsp/templates/templateUser.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/account/registrar.jsp"></put-attribute>
+    </definition>
+    <definition name="account.welcome" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/account/welcome.jsp"></put-attribute>
+    </definition>
+    <definition name="account.ingresar" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/account/ingresar.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.index" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/index.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.checkout1" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/checkout1.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.checkout2" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/checkout2.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.checkout3" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/checkout3.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.checkout4" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/checkout4.jsp"></put-attribute>
+    </definition>
+    <definition name="cart.consumer-order" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/cart/consumer-order.jsp"></put-attribute>
+    </definition>
+    <definition name="aboutus.misionyvision" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/aboutus/misionyvision.jsp"></put-attribute>
+    </definition>
+    <definition name="aboutus.presentacion" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/aboutus/presentacion.jsp"></put-attribute>
+    </definition>
+</tiles-definitions> 
