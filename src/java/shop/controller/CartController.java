@@ -70,13 +70,6 @@ public class CartController {
         return "cart.index";
     }
     
-    /*@RequestMapping(method = RequestMethod.GET)
-    public String wish2(ModelMap modelMap){
-        modelMap.put("title","Wish");
-        modelMap.put("action","wish");
-        
-        return "account.wishlist";
-    }*/
 
     @RequestMapping(value = "buy/{id}", method = RequestMethod.GET)
     public String buy(@PathVariable("id") int id, HttpSession session, ModelMap modelMap){
