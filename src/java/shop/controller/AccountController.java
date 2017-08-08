@@ -5,6 +5,8 @@
  */
 package shop.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import shop.entities.Account;
 import shop.entities.Consumer;
+import shop.entities.Item;
 import shop.service.AccountService;
+import shop.service.ConsumerService;
+import shop.service.OrderDetailService;
+import shop.service.OrderService;
+import shop.service.PayService;
+import shop.service.ProductService;
+import shop.service.ShippingService;
 
 /**
  *
@@ -25,6 +34,10 @@ public class AccountController {
 
     @Autowired
     private AccountService accountService;
+    
+    @Autowired
+    private ProductService productService;
+    
 
     @RequestMapping(value = "ingresar", method = RequestMethod.GET)
     public String myaccount(ModelMap modelMap) {
@@ -74,5 +87,5 @@ public class AccountController {
         return "redirect:/home.htm";
     }
     
-    
+
 }

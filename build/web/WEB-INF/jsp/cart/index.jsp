@@ -150,7 +150,7 @@ total.innerHTML = valor1 * valor2;
                             </tr>
                             <tr class="total">
                                 <td>Total</td>
-                                <th>$456.00</th>
+                                <th>S./${s}</th>
                             </tr>
                         </tbody>
                     </table>

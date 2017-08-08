@@ -32,6 +32,11 @@ public class AboutusController {
         return "aboutus.presentacion";
     }
     
-    
+    @RequestMapping(value = "contact", method = RequestMethod.GET)
+    public String contact(ModelMap modelMap) {
+        modelMap.put("title", "Contacto");
+        modelMap.put("accion", "contact");
+        return "aboutus.contact";
+    }    
     
 }

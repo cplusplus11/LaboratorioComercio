@@ -70,8 +70,14 @@ public class CartController {
         return "cart.index";
     }
     
-    
-    
+    /*@RequestMapping(method = RequestMethod.GET)
+    public String wish2(ModelMap modelMap){
+        modelMap.put("title","Wish");
+        modelMap.put("action","wish");
+        
+        return "account.wishlist";
+    }*/
+
     @RequestMapping(value = "buy/{id}", method = RequestMethod.GET)
     public String buy(@PathVariable("id") int id, HttpSession session, ModelMap modelMap){
         modelMap.put("title","Cart");
@@ -106,6 +112,46 @@ public class CartController {
         List<Item> cart = (List<Item>)session.getAttribute("cart");
         for(int i = 0; i < cart.size(); i++){
             if(cart.get(i).getProduct().getId() == id){
+                return i;
+            }    
+        } 
+        return -1;
+    }
+    
+        @RequestMapping(value = "wish/{id}", method = RequestMethod.GET)
+    public String wishlist(@PathVariable("id") int id, HttpSession session, ModelMap modelMap){
+        modelMap.put("title","Wish List");
+        if(session.getAttribute("wish")==null){
+            List<Item> wish = new ArrayList<Item>();
+            wish.add(new Item(productService.find(id),1));
+            session.setAttribute("wish", wish);
+        }else{
+            List<Item> wish = (List<Item>)session.getAttribute("wish");
+            int index = isExistswish(id, session);
+            if(index == -1){
+                wish.add(new Item(productService.find(id), 1));
+            }else{
+                int quantity = wish.get(index).getQuantity() +1 ;
+                wish.get(index).setQuantity(quantity);
+                session.setAttribute("wish", wish);
+            }
+            session.setAttribute("wish", wish);
+        }
+        return "account.wishlist";
+    }
+    
+    /*@RequestMapping(value = "deletewish/{index}", method = RequestMethod.GET)
+    public String deletewish(@PathVariable("index") int index, HttpSession session){
+        List<Item> wish = (List<Item>) session.getAttribute("wish");
+        wish.remove(index);
+        session.setAttribute("wish", wish);
+        return "redirect:/wish2.htm";
+    } */
+    
+    private int isExistswish(int id, HttpSession session){
+        List<Item> wish = (List<Item>)session.getAttribute("wish");
+        for(int i = 0; i < wish.size(); i++){
+            if(wish.get(i).getProduct().getId() == id){
                 return i;
             }    
         } 

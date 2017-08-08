@@ -26,6 +26,9 @@
     <definition name="account.ingresar" template="/WEB-INF/jsp/templates/templateUser.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/account/ingresar.jsp"></put-attribute>
     </definition>
+    <definition name="account.wishlist" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/account/wishlist.jsp"></put-attribute>
+    </definition>
     <definition name="cart.index" template="/WEB-INF/jsp/templates/templateUser.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/cart/index.jsp"></put-attribute>
     </definition>
@@ -49,5 +52,8 @@
     </definition>
     <definition name="aboutus.presentacion" template="/WEB-INF/jsp/templates/templateUser.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/aboutus/presentacion.jsp"></put-attribute>
+    </definition>
+    <definition name="aboutus.contact" template="/WEB-INF/jsp/templates/templateUser.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/aboutus/contact.jsp"></put-attribute>
     </definition>
 </tiles-definitions> 

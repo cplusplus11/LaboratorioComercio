@@ -78,16 +78,17 @@
                                 
             %>
             <li><i class="fa fa-fw fa-user"></i><a href="${pageContext.request.contextPath}/account/logout.htm">Salir</a></li>
+            <li><i class="fa fa-fw fa-user"></i><a href="">Hola <% out.print(username); %></a></li>
             <% }else{ %>
                     
                     <li><i class="fa fa-fw fa-user"></i><a href="${pageContext.request.contextPath}/account/ingresar.htm">Ingresar</a>
                     </li>
                     <li><i class="fa fa-fw fa-user"></i><a href="${pageContext.request.contextPath}/account/register.htm">Registrar</a></li>
             <%} %> 
-                    <li><a href="#">Contacto</a>
+                    <li><a href="${pageContext.request.contextPath}/aboutus/contact.htm">Contacto</a>
                     </li>
-                    <li><a href="#">Visualizaciones recientes</a>
-                    </li>
+                    <!--<li><a href="#">Visualizaciones recientes</a></li>-->
+                    
                 </ul>
             </div>
         </div>
@@ -204,7 +205,7 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown yamm-fw">
+                    <!--<li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
@@ -270,16 +271,16 @@
                                                 </li>
                                                 <li><a href="404.html">404 page</a>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a>
+                                                <li><a href="${pageContext.request.contextPath}/aboutus/contact.htm">Contact</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.yamm-content -->
+                                
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
 
             </div>
@@ -338,82 +339,26 @@
         <div id="footer" data-animate="fadeInUp">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <h4>Pages</h4>
+                    
+                    <!-- /.col-md-3 -->
 
-                        <ul>
-                            <li><a href="text.html">About us</a>
-                            </li>
-                            <li><a href="text.html">Terms and conditions</a>
-                            </li>
-                            <li><a href="faq.html">FAQ</a>
-                            </li>
-                            <li><a href="contact.html">Contact us</a>
-                            </li>
-                        </ul>
-
-                        <hr>
-
-                        <h4>User section</h4>
-
-                        <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
-                            </li>
-                            <li><a href="register.html">Regiter</a>
-                            </li>
-                        </ul>
-
-                        <hr class="hidden-md hidden-lg hidden-sm">
-
-                    </div>
+                    
                     <!-- /.col-md-3 -->
 
                     <div class="col-md-3 col-sm-6">
 
-                        <h4>Top categories</h4>
+                        <h4>Encuentranos</h4>
 
-                        <h5>Men</h5>
-
-                        <ul>
-                            <li><a href="category.html">T-shirts</a>
-                            </li>
-                            <li><a href="category.html">Shirts</a>
-                            </li>
-                            <li><a href="category.html">Accessories</a>
-                            </li>
-                        </ul>
-
-                        <h5>Ladies</h5>
-                        <ul>
-                            <li><a href="category.html">T-shirts</a>
-                            </li>
-                            <li><a href="category.html">Skirts</a>
-                            </li>
-                            <li><a href="category.html">Pants</a>
-                            </li>
-                            <li><a href="category.html">Accessories</a>
-                            </li>
-                        </ul>
-
-                        <hr class="hidden-md hidden-lg">
-
-                    </div>
-                    <!-- /.col-md-3 -->
-
-                    <div class="col-md-3 col-sm-6">
-
-                        <h4>Where to find us</h4>
-
-                        <p><strong>Obaju Ltd.</strong>
-                            <br>13/25 New Avenue
-                            <br>New Heaven
-                            <br>45Y 73J
-                            <br>England
+                        <p><strong>Teófilo Araujo Choque y familia</strong>
+                            <br>Asociación de Artesanos en Hojalatería Eslabón Araujo
+                            <br>Jr. las Dalias N.385 Miraflores
+                            <br>San Juan Bautista
+                            <br>Ayacucho
                             <br>
-                            <strong>Great Britain</strong>
+                            <strong>Peru</strong>
                         </p>
 
-                        <a href="contact.html">Go to contact page</a>
+                        <a href="www.google.com">Vamos a la Pagina</a>
 
                         <hr class="hidden-md hidden-lg">
 
@@ -426,7 +371,7 @@
 
                         <h4>Get the news</h4>
 
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="text-muted">Deja tu email y te mandaremos mayor informacion.</p>
 
                         <form>
                             <div class="input-group">
@@ -435,7 +380,7 @@
 
                                 <span class="input-group-btn">
 
-			    <button class="btn btn-default" type="button">Subscribe!</button>
+			    <button class="btn btn-default" type="button">Subscribete!</button>
 
 			</span>
 
@@ -445,7 +390,7 @@
 
                         <hr>
 
-                        <h4>Stay in touch</h4>
+                        <h4>Estar en contacto</h4>
 
                         <p class="social">
                             <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
@@ -477,7 +422,7 @@
         <div id="copyright">
             <div class="container">
                 <div class="col-md-6">
-                    <p class="pull-left">© 2015 Your name goes here.</p>
+                    <p class="pull-left">© 2017</p>
 
                 </div>
                 <div class="col-md-6">

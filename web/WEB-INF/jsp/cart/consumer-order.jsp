@@ -60,7 +60,7 @@
                         <h1>Order #${order.id} </h1>
 
                         <p class="lead">Order #${order.id}  fue hecha el <strong>${order.fecha}</strong> y ahora está <strong>en espera</strong>.</p>
-                        <p class="text-muted">Si tienes una pregunta, porfavor entra gratis aquí <a href="#">contactanos</a>, nuestro servicio al consumidor está abierto las 24 horas 24/7.</p>
+                        <p class="text-muted">Si tienes una pregunta, porfavor entra gratis aquí <a href="${pageContext.request.contextPath}/aboutus/contact.htm">contactanos</a>, nuestro servicio al consumidor está abierto las 24 horas 24/7.</p>
 
                         <hr>
 
@@ -103,7 +103,7 @@
                                     
                                     <tr>
                                         <th colspan="5" class="text-right">Orden subtotal</th>
-                                        <th>$446.00</th>
+                                        <th>S./${s}</th>
                                     </tr>
                                     <tr>
                                         <th colspan="5" class="text-right">Costo de envio</th>
@@ -115,7 +115,7 @@
                                     </tr>
                                     <tr>
                                         <th colspan="5" class="text-right">Total</th>
-                                        <th>S./</th>
+                                        <th>S./${shipping.price + s}</th>
                                     </tr>
                                 </tfoot>
                             </table>
